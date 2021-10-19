@@ -108,7 +108,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrendMainTableViewCell" rowHeight="427" id="AUm-18-nic" customClass="TrendMainTableViewCell" customModule="MediaTrend" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TrendMainTableViewCell" rowHeight="427" id="AUm-18-nic" customClass="TrendMainTableViewCell" customModule="MediaTrend" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="248.5" width="414" height="427"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AUm-18-nic" id="6WN-Hy-9v6">
@@ -313,6 +313,7 @@
                         <outlet property="buttonStackBackView" destination="dun-e1-y0D" id="ynB-ji-81X"/>
                         <outlet property="buttonStackShadowView" destination="qsu-Ou-BcI" id="LAI-Il-BEi"/>
                         <outlet property="mainTableView" destination="z5P-Ez-Jef" id="JMf-PN-v0f"/>
+                        <segue destination="7BE-P2-HPO" kind="show" identifier="CastingSegue" id="wMd-ZG-afW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -327,7 +328,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJy-UN-Scd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471" y="50"/>
+            <point key="canvasLocation" x="1434" y="72"/>
+        </scene>
+        <!--Casting-->
+        <scene sceneID="1TU-pq-9Mi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Casting" id="7BE-P2-HPO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="89W-bC-ZoZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibE-ra-qbx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486" y="352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gBd-xR-7Lz">

@@ -48,6 +48,8 @@ class TrendMainViewController: UIViewController {
     super.init(coder: coder)
   }
   
+  let castingSegueIdentifier = "CastingSegue"
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -101,7 +103,13 @@ extension TrendMainViewController: UITableViewDataSource {
 extension TrendMainViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    
     return 427
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    performSegue(withIdentifier: castingSegueIdentifier, sender: nil)
   }
 }
 
