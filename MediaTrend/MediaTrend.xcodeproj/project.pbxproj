@@ -21,6 +21,10 @@
 		DDF29418271EC45C0024DB39 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF29417271EC45C0024DB39 /* SearchViewController.swift */; };
 		DDF2941D271EC79E0024DB39 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF2941B271EC79E0024DB39 /* SearchResultTableViewCell.swift */; };
 		DDF2941E271EC79E0024DB39 /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDF2941C271EC79E0024DB39 /* SearchResultTableViewCell.xib */; };
+		DDF29423271ED6200024DB39 /* Casting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF29422271ED6200024DB39 /* Casting.storyboard */; };
+		DDF29426271ED6430024DB39 /* CastingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF29424271ED6430024DB39 /* CastingTableViewCell.swift */; };
+		DDF29427271ED6430024DB39 /* CastingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDF29425271ED6430024DB39 /* CastingTableViewCell.xib */; };
+		DDF2942C271EDCEA0024DB39 /* CastingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF2942B271EDCEA0024DB39 /* CastingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		DDF29417271EC45C0024DB39 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DDF2941B271EC79E0024DB39 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		DDF2941C271EC79E0024DB39 /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
+		DDF29422271ED6200024DB39 /* Casting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Casting.storyboard; sourceTree = "<group>"; };
+		DDF29424271ED6430024DB39 /* CastingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastingTableViewCell.swift; sourceTree = "<group>"; };
+		DDF29425271ED6430024DB39 /* CastingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastingTableViewCell.xib; sourceTree = "<group>"; };
+		DDF2942B271EDCEA0024DB39 /* CastingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +80,7 @@
 		DDF293DD271E25200024DB39 /* MediaTrend */ = {
 			isa = PBXGroup;
 			children = (
-				DDF2940E271EAA330024DB39 /* Model */,
-				DDF293FB271E36C60024DB39 /* Custom */,
+				DDF29421271ED5D00024DB39 /* Global */,
 				DDF293F5271E26880024DB39 /* Screen */,
 				DDF293F2271E252D0024DB39 /* Support */,
 			);
@@ -151,8 +158,29 @@
 		DDF29420271ED4A80024DB39 /* Casting */ = {
 			isa = PBXGroup;
 			children = (
+				DDF2942A271ED6540024DB39 /* Xib */,
+				DDF29422271ED6200024DB39 /* Casting.storyboard */,
+				DDF29424271ED6430024DB39 /* CastingTableViewCell.swift */,
+				DDF2942B271EDCEA0024DB39 /* CastingViewController.swift */,
 			);
 			path = Casting;
+			sourceTree = "<group>";
+		};
+		DDF29421271ED5D00024DB39 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				DDF293FB271E36C60024DB39 /* Custom */,
+				DDF2940E271EAA330024DB39 /* Model */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		DDF2942A271ED6540024DB39 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				DDF29425271ED6430024DB39 /* CastingTableViewCell.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,10 +240,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF29423271ED6200024DB39 /* Casting.storyboard in Resources */,
 				DDF293EB271E25210024DB39 /* LaunchScreen.storyboard in Resources */,
 				DDF2941E271EC79E0024DB39 /* SearchResultTableViewCell.xib in Resources */,
 				DDF293E8271E25210024DB39 /* Assets.xcassets in Resources */,
 				DDF29416271EC44F0024DB39 /* Search.storyboard in Resources */,
+				DDF29427271ED6430024DB39 /* CastingTableViewCell.xib in Resources */,
 				DDF293E6271E25200024DB39 /* TrendMain.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,8 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDF293F7271E2C080024DB39 /* TrendMainTableViewCell.swift in Sources */,
+				DDF29426271ED6430024DB39 /* CastingTableViewCell.swift in Sources */,
 				DDF293FD271E36DF0024DB39 /* HorizontalPaddedLabel.swift in Sources */,
 				DDF29418271EC45C0024DB39 /* SearchViewController.swift in Sources */,
+				DDF2942C271EDCEA0024DB39 /* CastingViewController.swift in Sources */,
 				DDF293DF271E25200024DB39 /* AppDelegate.swift in Sources */,
 				DDF293F4271E26830024DB39 /* TrendMainViewController.swift in Sources */,
 				DDF29410271EAA400024DB39 /* TvShowManager.swift in Sources */,
