@@ -91,7 +91,10 @@ extension TrendMainViewController: UITableViewDataSource {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    segue.destination
+    
+    if let vc = segue.destination as? SearchViewController {
+      vc.modalPresentationStyle = .fullScreen
+    }
   }
 }
 
