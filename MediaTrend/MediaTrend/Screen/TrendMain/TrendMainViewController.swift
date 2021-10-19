@@ -90,7 +90,9 @@ extension TrendMainViewController: UITableViewDataSource {
     return cell
   }
   
-  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    segue.destination
+  }
 }
 
 extension TrendMainViewController: UITableViewDelegate {

@@ -72,8 +72,6 @@ final class TrendMainTableViewCell: UITableViewCell {
     
     posterImageView.backgroundColor = .lightGray
     
-    UIImage(data: <#T##Data#>)
-    
     ratingLabel.text = "\(tvShowData.rate)"
     
     starringLabel.text = tvShowData.starring
