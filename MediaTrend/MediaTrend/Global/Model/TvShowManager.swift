@@ -41,7 +41,7 @@ final class TvShowManager {
     
     TvShow(title: "Grey's Anatomy", releaseDate: "03/27/2005",genre: "Drama",region:"United States", overview: "Follows the personal and professional lives of a group of doctors at Seattle’s Grey Sloan Memorial Hospital.", rate: 7.6, starring: "Ellen Pompeo, Justin Chambers, James Pickens Jr., Chandra Wilson, Vanessa Bell Calloway",backdropImage:"https://www.themoviedb.org/t/p/original/6yUbsvFXLojGXlD86yz79toYywn.jpg"),
     
-    TvShow(title: "House of Secrets: The Burari Deaths", releaseDate: "10/08/2021",genre: "Documentary",region:"India", overview: "Suicide, murder... or something else? This docuseries examines chilling truths and theories around the deaths of 11 members of a Delhi family.", rate: 0.0, starring: "",backdropImage:"https://www.themoviedb.org/t/p/original/fw3DUxlgGFAg8zarKJbQZ3xn25X.jpg"),
+    TvShow(title: "House of Secrets The Burari Deaths", releaseDate: "10/08/2021",genre: "Documentary",region:"India", overview: "Suicide, murder... or something else? This docuseries examines chilling truths and theories around the deaths of 11 members of a Delhi family.", rate: 0.0, starring: "",backdropImage:"https://www.themoviedb.org/t/p/original/fw3DUxlgGFAg8zarKJbQZ3xn25X.jpg"),
     
     
     TvShow(title: "The King's Affection", releaseDate: "10/11/2021",genre: "Drama",region:"South Korea", overview: "When the crown prince is killed, his twin sister assumes the throne while trying to keep her identity and affection for her first love a royal secret.", rate: 0.0, starring: "Park Eun-bin, Rowoon, Nam Yoon-su, Bae Yoon-kyung, Choi Byung-chan, Lee Pil-mo, Han Chae-ah",backdropImage:"https://www.themoviedb.org/t/p/original/4r7scgI5aUrShN0YzriAatWd15e.jpg"),
