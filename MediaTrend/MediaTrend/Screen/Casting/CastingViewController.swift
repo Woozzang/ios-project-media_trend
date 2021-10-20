@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class CastingViewController: UIViewController {
 
@@ -25,22 +26,14 @@ final class CastingViewController: UIViewController {
   
   @IBOutlet private weak var castingTableView: UITableView!
   
-  var tvShowData: TvShow? {
-    
-    didSet {
-      // TODO: 여기서 호출하면 안되는 이유
-      // movieTitleLabel 이 아직 초기화 안되어있는 시점임
-      // IBOutlet 은 viewDidLoad 부터 안전하게 사용할 수 있다.
-//      setUpTableViewHeader(with: tvShowData)
-    }
-  }
+  var tvShowData: TvShow?
 
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    navigationController?.navigationBar.tintColor = .black
     
     setUpTableViewHeader(with: tvShowData)
-//    castingTableView.rowHeight = UITableView.automaticDimension
     setUpCastingTableView()
   }
 
@@ -57,27 +50,8 @@ final class CastingViewController: UIViewController {
     guard let tvShowData = data else { return }
     
     let imageURL = URL(string: tvShowData.backdropImage)
-    
-    URLSession.shared.dataTask(with: imageURL!) { data, response, error in
-      
-      if let error = error {
-        print(error.localizedDescription)
-        return
-      }
-      
-      guard let response = response as? HTTPURLResponse else { return }
-      
-      guard (200...299).contains(response.statusCode) else { return }
-      
-      if let data = data {
-        DispatchQueue.main.async { [weak self] in
-          guard let self = self else { return }
-          self.backDropImageView.image = UIImage(data: data)
-        }
-      }
- 
-    }.resume()
-    
+
+    self.backDropImageView.kf.setImage(with: imageURL)
     
     posterImageView.image = UIImage(named: tvShowData.title)
     movieTitleLabel.text = tvShowData.title
