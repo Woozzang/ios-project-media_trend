@@ -16,7 +16,11 @@ class CastingTableViewCell: UITableViewCell {
     return identifier
   }
   
-  @IBOutlet weak var mainImageView: UIImageView!
+  @IBOutlet weak var mainImageView: UIImageView! {
+    didSet {
+      mainImageView.layer.cornerRadius = 10
+    }
+  }
   
   @IBOutlet weak var nameLabel: UILabel!
   

@@ -133,8 +133,9 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0EJ-NM-9Lu">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="225"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="오징어게임" translatesAutoresizingMaskIntoConstraints="NO" id="0p2-Jc-dRf">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="아바타" translatesAutoresizingMaskIntoConstraints="NO" id="0p2-Jc-dRf">
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="225"/>
+                                                                            <color key="backgroundColor" red="0.80392156859999997" green="0.8980392157" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="225" id="uKn-xW-3Vt"/>
                                                                             </constraints>
@@ -367,7 +368,7 @@
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="tv" catalog="system" width="128" height="97"/>
-        <image name="오징어게임" width="640" height="360"/>
+        <image name="아바타" width="120" height="180.5"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

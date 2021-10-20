@@ -70,7 +70,7 @@ final class TrendMainTableViewCell: UITableViewCell {
     
     genreLabel.text = "#\(tvShowData.genre)"
     
-    posterImageView.backgroundColor = .lightGray
+    posterImageView.image = UIImage(named: tvShowData.title)
     
     ratingLabel.text = "\(tvShowData.rate)"
     

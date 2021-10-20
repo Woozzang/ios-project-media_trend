@@ -94,8 +94,20 @@ extension TrendMainViewController: UITableViewDataSource {
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
-    if let vc = segue.destination as? SearchViewController {
-      vc.modalPresentationStyle = .fullScreen
+    switch segue.destination {
+      
+      case let searchVC as SearchViewController:
+        
+        searchVC.modalPresentationStyle = .fullScreen
+      
+      case let castingVC as CastingViewController:
+        
+        guard let tvShowData = sender as? TvShow else { assertionFailure(); return }
+        
+        castingVC.tvShowData = tvShowData
+        
+      default:
+        return
     }
   }
 }
@@ -109,7 +121,7 @@ extension TrendMainViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-    performSegue(withIdentifier: castingSegueIdentifier, sender: nil)
+    performSegue(withIdentifier: castingSegueIdentifier, sender: tvShowManager.tvShowList[indexPath.row])
   }
 }
 
