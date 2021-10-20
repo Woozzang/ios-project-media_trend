@@ -6,7 +6,6 @@
 | TrendMainVC             |  CastingVC 			| SearchVC 		|
 :-------------------------:|:-------------------------:|:-------------------------:
 <img src="Resources/3.png" width= "70%"> | <img src="Resources/4.png" width= "70%"> | <img src="Resources/5.png" width= "70%">
-
 <br /><br />
 # Index 📇
 - [구현기간](#구현-기간)
@@ -37,7 +36,7 @@
 <br /> 
 
 - **UIView & CALayer**
-  - `maskToBounds`, `clipToBounds`
+  - `masksToBounds`, `clipsToBounds`
   - `ShadowView`
 <br />
 
@@ -50,7 +49,7 @@
 
 ## 의존성
  - **`SwiftPM`** : 의존성 관리자
- - **`Kingfisher`**
+ - **`Kingfisher`** : 이미지 비동기 다운로드 및 캐싱
  - **`Alamofire`**
 
 <br /><br />
@@ -83,7 +82,10 @@
 - [x]  우선 임시 데이터로 테이블 뷰 동작 확인
 - [x]  ➕ A 화면에서 C화면으로 화면 전환 시 tvShow 모델 정보를 전달
 - [x]  ➕ 테이블 헤더뷰를 만들고, 헤더뷰에 영화정보를 보여주기
-- [x]  🔥 헤더뷰 사진을 `Kingfisher` 를 사용하여 불러오기
+- [x]  🔥 헤더뷰 배경 사진을 `Kingfisher` 를 사용하여 불러오기
+- []  ➕ 줄거리 정보를 표현하는 줄거리 셀 추가하기 
+  - 접기 펼치기 버튼 기능을 구현한다.
+  -  AutomaticDimension, reloadRows, addTarget
 <br /><br />
 
 # 구현 포인트
@@ -99,7 +101,7 @@ class CastingTableViewCell: UITableViewCell {
   
   static var identifier = "CastingTableViewCell"
   
-	// UINib 생성자에 필요. 시맨틱을 주기 위해 계산속성으로 따로 구현했다.
+  // UINib 생성자에 필요. 시맨틱을 주기 위해 계산속성으로 따로 구현했다.
   static var nibName: String {
     
     return identifier
@@ -129,10 +131,10 @@ class CastingTableViewCell: UITableViewCell {
 ### ☑️  다중계층 View 의 라운드처리 와 그림자
 <br />
 <img src="Resources/2.png" width = "60%">
-<br />
 
 - 라운드 처리된 다중 계층 뷰에 그림자를 추어야 했다. 하지만 `clipsToBounds` 상태에서 그림자를 추가할 수는 없다.
 - 라운드 처리된 뷰와 여백 제약을 0으로 맞춘 `ShadowView` 를 만들고 이곳에서 그림자를 구현했다.
+- 은은한 그림자 좋았다~~
 <br />
 
 ### ☑️ MaskToBounds 와 ClipsToBounds 차이는?
@@ -171,6 +173,17 @@ class CastingTableViewCell: UITableViewCell {
 //    }.resume()
 ```
 <br />
+
+### ☑️  Cell 안에 포함된 Button 식별하기
+
+Cell 안에 포함된 Button 의 액션 메서드는 VC 에 정의되어 있다.
+
+VC 는 이벤트가 발생한 이 버튼이 어떤 셀의 버튼인지 어떻게 식별할 수 있을까?
+
+1. **Tag 사용하기 (이번에 사용한 방법)**
+    - Tag 번호를 IndexPath.row 와 같게 부여해서, Cell 과 연관된 모델 정보를 가지고 올 수 있다.
+2. **`weak` 으로 자신의 Cell 을 참조하는 커스텀 버튼을 만들어보자 (혹은 private extension 으로 제한된 범위의 확장만)**
+
 
 # 이왜안
 이거 왜 안돼 ???? 🤔

@@ -133,7 +133,7 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0EJ-NM-9Lu">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="225"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="아바타" translatesAutoresizingMaskIntoConstraints="NO" id="0p2-Jc-dRf">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0p2-Jc-dRf">
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="225"/>
                                                                             <color key="backgroundColor" red="0.80392156859999997" green="0.8980392157" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
@@ -315,6 +315,7 @@
                         <outlet property="buttonStackShadowView" destination="qsu-Ou-BcI" id="LAI-Il-BEi"/>
                         <outlet property="mainTableView" destination="z5P-Ez-Jef" id="JMf-PN-v0f"/>
                         <segue destination="7BE-P2-HPO" kind="show" identifier="CastingSegue" id="wMd-ZG-afW"/>
+                        <segue destination="qqF-4E-utL" kind="show" identifier="WebSegue" id="fb9-Ou-hEP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -331,6 +332,16 @@
             </objects>
             <point key="canvasLocation" x="1434" y="72"/>
         </scene>
+        <!--Web-->
+        <scene sceneID="M9i-sh-Qz6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Web" id="qqF-4E-utL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gM0-tH-dhM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJw-89-icu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1599" y="137"/>
+        </scene>
         <!--Casting-->
         <scene sceneID="1TU-pq-9Mi">
             <objects>
@@ -339,7 +350,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibE-ra-qbx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486" y="352"/>
+            <point key="canvasLocation" x="1614" y="227"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gBd-xR-7Lz">
@@ -368,7 +379,6 @@
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="tv" catalog="system" width="128" height="97"/>
-        <image name="아바타" width="120" height="180.5"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

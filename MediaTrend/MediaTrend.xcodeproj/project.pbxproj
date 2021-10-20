@@ -26,6 +26,8 @@
 		DDF29427271ED6430024DB39 /* CastingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDF29425271ED6430024DB39 /* CastingTableViewCell.xib */; };
 		DDF2942C271EDCEA0024DB39 /* CastingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF2942B271EDCEA0024DB39 /* CastingViewController.swift */; };
 		DDF29431271FDC1D0024DB39 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DDF29430271FDC1D0024DB39 /* Kingfisher */; };
+		DDF29434271FEF6A0024DB39 /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF29433271FEF6A0024DB39 /* Web.storyboard */; };
+		DDF29436271FEF760024DB39 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF29435271FEF760024DB39 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		DDF29424271ED6430024DB39 /* CastingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastingTableViewCell.swift; sourceTree = "<group>"; };
 		DDF29425271ED6430024DB39 /* CastingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastingTableViewCell.xib; sourceTree = "<group>"; };
 		DDF2942B271EDCEA0024DB39 /* CastingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastingViewController.swift; sourceTree = "<group>"; };
+		DDF29433271FEF6A0024DB39 /* Web.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
+		DDF29435271FEF760024DB39 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 		DDF293F5271E26880024DB39 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				DDF29432271FE3F90024DB39 /* Web */,
 				DDF29420271ED4A80024DB39 /* Casting */,
 				DDF29414271EC43D0024DB39 /* TrendMain */,
 				DDF29413271EC4320024DB39 /* Search */,
@@ -185,6 +190,15 @@
 			path = Xib;
 			sourceTree = "<group>";
 		};
+		DDF29432271FE3F90024DB39 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				DDF29433271FEF6A0024DB39 /* Web.storyboard */,
+				DDF29435271FEF760024DB39 /* WebViewController.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -251,6 +265,7 @@
 				DDF29423271ED6200024DB39 /* Casting.storyboard in Resources */,
 				DDF293EB271E25210024DB39 /* LaunchScreen.storyboard in Resources */,
 				DDF2941E271EC79E0024DB39 /* SearchResultTableViewCell.xib in Resources */,
+				DDF29434271FEF6A0024DB39 /* Web.storyboard in Resources */,
 				DDF293E8271E25210024DB39 /* Assets.xcassets in Resources */,
 				DDF29416271EC44F0024DB39 /* Search.storyboard in Resources */,
 				DDF29427271ED6430024DB39 /* CastingTableViewCell.xib in Resources */,
@@ -272,6 +287,7 @@
 				DDF2942C271EDCEA0024DB39 /* CastingViewController.swift in Sources */,
 				DDF293DF271E25200024DB39 /* AppDelegate.swift in Sources */,
 				DDF293F4271E26830024DB39 /* TrendMainViewController.swift in Sources */,
+				DDF29436271FEF760024DB39 /* WebViewController.swift in Sources */,
 				DDF29410271EAA400024DB39 /* TvShowManager.swift in Sources */,
 				DDF293E1271E25200024DB39 /* SceneDelegate.swift in Sources */,
 				DDF29412271EAA840024DB39 /* TvShow.swift in Sources */,

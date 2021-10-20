@@ -22,8 +22,6 @@ final class TrendMainTableViewCell: UITableViewCell {
     }
   }
   
-  private var linkButtonAction: (() -> ())?
-  
   @IBOutlet private weak var shadowView: UIView! {
     
     didSet {
@@ -64,7 +62,7 @@ final class TrendMainTableViewCell: UITableViewCell {
     TvShow 데이터를 이용해 셀 콘텐츠를 구성한다.
    */
   
-  internal func setUpCell(with tvShowData: TvShow, linkButtonAction: @escaping () -> ()) {
+  internal func setUpCell(with tvShowData: TvShow) {
     
     releaseDateLabel.text = tvShowData.releaseDate
     
@@ -77,14 +75,5 @@ final class TrendMainTableViewCell: UITableViewCell {
     starringLabel.text = tvShowData.starring
     
     titleLabel.text = tvShowData.title
-    
-    self.linkButtonAction = linkButtonAction
-    
-    linkButton.addTarget(self, action: #selector(didTapLinkButton), for: .touchUpInside)
   }
-  
-  @objc func didTapLinkButton() {
-    linkButtonAction?()
-  }
-
 }

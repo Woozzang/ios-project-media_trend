@@ -49,6 +49,7 @@ class TrendMainViewController: UIViewController {
   }
   
   let castingSegueIdentifier = "CastingSegue"
+  let webSegueIdentifier = "WebSegue"
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -64,6 +65,11 @@ class TrendMainViewController: UIViewController {
   
   @IBAction func didTapSearchButton(_ sender: Any) {
     print(#function)
+  }
+  
+  @objc func didTapLinkButton(sender: UIButton) {
+    print(#function)
+    performSegue(withIdentifier: webSegueIdentifier, sender: sender)
   }
 }
 
@@ -81,13 +87,10 @@ extension TrendMainViewController: UITableViewDataSource {
     
     let tvShowData = tvShowManager.tvShowList[indexPath.row]
     
-    cell.setUpCell(with: tvShowData) { [weak self] in
-      
-      let vc = UIViewController()
-      vc.view.backgroundColor = .white
-      
-      self?.present(vc, animated: true, completion: nil)
-    }
+    cell.setUpCell(with: tvShowData)
+    
+    cell.linkButton.addTarget(self, action: #selector(didTapLinkButton), for: .touchUpInside)
+    cell.linkButton.tag = indexPath.row
     
     return cell
   }
@@ -106,6 +109,18 @@ extension TrendMainViewController: UITableViewDataSource {
         
         castingVC.tvShowData = tvShowData
         
+      case let nav as UINavigationController :
+        
+        if let webVC = nav.viewControllers.first as? WebViewController {
+          
+          guard let linkButton = sender as? UIButton else {
+            assertionFailure()
+            return
+          }
+          
+          webVC.title = tvShowManager.tvShowList[linkButton.tag].title
+        }
+
       default:
         return
     }
